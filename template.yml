@@ -105,4 +105,9 @@ objects:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 1G
+        storage: ${STORAGE_SIZE}
+parameters:
+- name: STORAGE_SIZE
+  displayName: Volume size
+  description: The persistent volume claim size
+  value: 1G
